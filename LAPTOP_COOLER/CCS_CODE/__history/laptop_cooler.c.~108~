@@ -1,0 +1,80 @@
+#include <laptop_cooler.h>   //Proje header
+//LCD Konfigürasyon
+#define LCD_ENABLE_PIN PIN_C2
+#define LCD_RS_PIN PIN_C0
+#define LCD_RW_PIN PIN_C1
+#define LCD_DATA4 PIN_C4
+#define LCD_DATA5 PIN_C5
+#define LCD_DATA6 PIN_C6
+#define LCD_DATA7 PIN_C7
+#include <lcd.c>
+//Buton Konfigürasyon
+int buton=0;
+void Buton_Say()
+{
+   if(input(pin_b0)==1)
+   {
+    buton ++;
+    delay_ms(100);
+    main ()
+   }
+}
+//Sýcaklýk Deðeri Okuma
+float VREF_VAL=5.0F;
+float RESOLUTION_VAL=1024.0F;
+void Sicaklik_Degeri()
+{
+   set_adc_channel(0);
+   delay_us(50);
+   float sensor = (float)read_adc();
+   float Sicaklik = (sensor*(VREF_VAL/RESOLUTION_VAL)*100.0F)/64.0F;
+   //LCD Ekrana Yazma
+   printf(lcd_putc,"\f Mode: %d \n Sicaklik:%f C",buton,Sicaklik);
+   delay_ms(40); 
+}
+//ana program akýsý
+void main()
+{
+   //Anologtan Dijitale Çevrim Konfigürasyonu
+   setup_adc_ports(AN0);
+   setup_adc(ADC_CLOCK_INTERNAL);
+   //Port Ýnput Outuput Konfigürasyonu
+   set_tris_b(0b11111111);
+   set_tris_d(0b00000000);
+   //LCD Ýnitialize
+   lcd_init();
+   //Program Döngüsü
+   for (;;)
+   {  
+      //Buton_Say(); 
+      if(buton==0)
+      {
+       output_low(pin_d0);
+       output_low(pin_d1);
+       Buton_Say();
+       // Sicaklik_Degeri();
+      }
+      
+      else if(buton==1)
+      {
+       output_high(pin_d0);
+       output_low(pin_d1);
+       //Buton_Say();
+      //Sicaklik_Degeri();
+      }
+      
+      else if(buton==2)
+      {
+       output_high(pin_d0);          
+       output_high(pin_d1);
+     //  Buton_Say();
+      // Sicaklik_Degeri();
+      }
+      
+      else if(buton==3)
+      {
+       buton=0; 
+      }
+   }
+
+}

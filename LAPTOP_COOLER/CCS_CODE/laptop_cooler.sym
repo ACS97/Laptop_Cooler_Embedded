@@ -1,0 +1,160 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     buton
+005-008 VREF_VAL
+009-00C RESOLUTION_VAL
+00D     lcd_init.i
+00D-010 Sicaklik_Degeri.sensor
+00D     Buton_Say.@SCRATCH1
+00E     lcd_init.@SCRATCH1
+011-014 Sicaklik_Degeri.Sicaklik
+015     @PSTRINGCN_660.P1
+015-018 @PRINTF_L32D_660FPFPF.P2
+015-018 @FLT.P3
+015     @PRINTF_D_660.P4
+015-016 @ITOF.P5
+015     Sicaklik_Degeri.@SCRATCH1
+016     @PRINTF_D_660.P1
+016     Sicaklik_Degeri.@SCRATCH2
+016     @PSTRINGCN_660.@SCRATCH1
+017     Sicaklik_Degeri.@SCRATCH3
+017     @PSTRINGCN_660.@SCRATCH2
+017     @PRINTF_D_660.@SCRATCH1
+018     Sicaklik_Degeri.@SCRATCH4
+018     @PRINTF_D_660.@SCRATCH2
+019     @PRINTF_L32D_660FPFPF.P1
+019-01C @FLT.P2
+019-01C @DIVFF.P3
+019     @PRINTF_D_660.@SCRATCH3
+01A     @PRINTF_D_660.@SCRATCH4
+01A     @PRINTF_L32D_660FPFPF.@SCRATCH1
+01B     @DIV88.P1
+01B     @PRINTF_L32D_660FPFPF.@SCRATCH2
+01C     @DIV88.P1
+01C     @PRINTF_L32D_660FPFPF.@SCRATCH3
+01D-020 @DIVFF.P1
+01D     @DIV88.@SCRATCH1
+01D     @PRINTF_L32D_660FPFPF.@SCRATCH4
+01D     @FLT.@SCRATCH1
+01E     @PRINTF_L32D_660FPFPF.@SCRATCH5
+01E     @FLT.@SCRATCH2
+01F     @PRINTF_L32D_660FPFPF.@SCRATCH6
+020     @PRINTF_L32D_660FPFPF.@SCRATCH7
+021     @DIVFF.@SCRATCH1
+021     @PRINTF_L32D_660FPFPF.@SCRATCH8
+022-025 @FTOSD.P1
+022     lcd_putc.c
+022-025 @DIV3232.P1
+022-025 @MULFF.P2
+022     @DIVFF.@SCRATCH2
+023     @delay_ms1.P1
+023     lcd_gotoxy.x
+023     @DIVFF.@SCRATCH3
+024     lcd_gotoxy.y
+024     @DIVFF.@SCRATCH4
+025     lcd_gotoxy.address
+025     @DIVFF.@SCRATCH5
+026-029 @DIV3232.P1
+026-029 @MULFF.P2
+026     lcd_gotoxy.@SCRATCH1
+026     @DIVFF.@SCRATCH6
+026     @FTOSD.@SCRATCH1
+027     lcd_send_byte.address
+028     lcd_send_byte.n
+029     lcd_read_byte.low
+029     lcd_send_byte.@SCRATCH1
+02A     lcd_send_nibble.n
+02A     lcd_read_byte.high
+02A     @MULFF.@SCRATCH1
+02A     @DIV3232.@SCRATCH1
+02B     lcd_read_nibble.n
+02B     lcd_read_byte.@SCRATCH1
+02B     @MULFF.@SCRATCH2
+02B     @DIV3232.@SCRATCH2
+02C     lcd_read_nibble.@SCRATCH1
+02C     @MULFF.@SCRATCH3
+02C     @DIV3232.@SCRATCH3
+02D     @DIV3232.@SCRATCH4
+02E     @DIV3232.@SCRATCH5
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000014  LCD_INIT_STRING.data
+000018  @const687.call
+000034  @delay_ms1
+00005A  lcd_send_nibble
+0000A2  lcd_read_nibble
+0000F4  lcd_read_byte
+000142  lcd_send_byte
+000188  lcd_init
+0001F6  @ITOF
+00022E  @DIVFF
+000388  @MULFF
+00047A  lcd_gotoxy
+00049C  lcd_putc
+0004EC  @PSTRINGCN_660
+00050A  @DIV88
+000532  @PRINTF_D_660
+0005DE  @FTOSD
+00061E  @DIV3232
+0006AC  @PRINTF_L32D_660FPFPF
+000826  @FLT
+00089C  Sicaklik_Degeri
+000A70  Buton_Say
+000A82  @cinit1
+000A82  MAIN
+000AAA  @cinit2
+
+Project Directory:
+    C:\Users\ahmet\OneDrive\Masaüstü\Embedded System ED&X\PIC CCS C Compiler\Embedded_BootCamp_EDU\Notlar ve Dökümanlar\LAPTOP_COOLER\CCS_CODE\
+
+Project Files:
+    laptop_cooler.c                                         [23-Kas-22 00:33  CRC=D4A7CD95]
+    laptop_cooler.h                                         [21-Kas-22 23:36  CRC=1C5A6858]
+    ..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [21-Haz-13 16:05  CRC=A157EDDE]
+    ..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [23-Aðu-12 09:01  CRC=D28E8746]
+
+Source signature=37773257
+
+Units:
+    laptop_cooler (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   laptop_cooler.xsym
+    Errors:      laptop_cooler.err
+    Ext Symbols: laptop_cooler.esym
+    INHX32:      laptop_cooler.hex
+    Symbols:     laptop_cooler.sym
+    List:        laptop_cooler.lst
+    Debug/COFF:  laptop_cooler.cof
+    Project:     laptop_cooler.ccspjt
+    Call Tree:   laptop_cooler.tre
+    Statistics:  laptop_cooler.STA

@@ -1,0 +1,23 @@
+[PROJECT]
+Target=laptop_cooler.hex
+Processor_Text=PIC18F4550
+CCSVerions=5.007
+Compiler=PCH
+CCSVersion=5.007
+[Target Data]
+FileList=laptop_cooler.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\ahmet\OneDrive\Masaüstü\Embedded System ED&X\PIC CCS C Compiler\Embedded_BootCamp_EDU\Notlar ve Dökümanlar\LAPTOP_COOLER\CCS_CODE\
+[C:\Users\ahmet\OneDrive\Masaüstü\Embedded System ED&X\PIC CCS C Compiler\Embedded_BootCamp_EDU\Notlar ve Dökümanlar\LAPTOP_COOLER\CCS_CODE\laptop_cooler]
+Type=4
+[mru-list]
+1=laptop_cooler.c
+[Opened Files]
+1=laptop_cooler.c
+2=
+3=
+[laptop_cooler.c]
+Type=4
+[Units]
+Count=1
+1=laptop_cooler (main)

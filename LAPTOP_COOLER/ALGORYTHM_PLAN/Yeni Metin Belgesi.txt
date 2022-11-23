@@ -1,0 +1,15 @@
+// Buton Konfigürasyonu
+
+1-Buton= 0 ise fanlar çalışmaz.
+2-Buton= 1 ise 3 fan çalışır. 
+3-Buton= 2 ise 6 fan çalışır.
+
+//Sıcaklık Interruptları
+
+Eğer sıcaklık 80 ile 90 arasında ise 3 fan otomatik çalışır.
+Eğer sıcaklık 90 dan büyük ise 6 fan otomatik çalışır.
+Eğer sıcaklık 110 dan büyükse buzzer öter.
+
+// Ekran Konfigürasyonları
+1-Buton durumu
+2-Sıcaklık Değeri
